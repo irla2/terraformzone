@@ -25,7 +25,7 @@ resource "aws_instance" "chef" {
     recreate_client = true
     user_name       = "iramu053@gmail.com"
     user_key        = "${file("./irla.pem")}"
-    version         = "12.4.1"
+    version         = "13.8.5"
 }
 provisioner "file"{
       source= "/tmp/gameoflife.war"
