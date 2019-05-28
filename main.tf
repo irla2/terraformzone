@@ -1,6 +1,6 @@
 provider "aws" {
-    accesskey= "${var.accesskey}"
-    secretkey= "${var.secretkey}"
+    access_key= "${var.access_key}"
+    secret_key= "${var.secret_key}"
     region= "us-east-2"      
 }
 resource "aws_instance" "chef" {
