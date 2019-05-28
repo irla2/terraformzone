@@ -1,10 +1,10 @@
 provider "aws" {
-    access_key= "${var.access_key}"
-    secret_key= "${var.secret_key}"
+    accesskey= "${var.accesskey}"
+    secretkey= "${var.secretkey}"
     region= "us-east-2"      
 }
-resource "aws_instance" "app" {
-    ami= "ami-0ebbf2179e615c338"
+resource "aws_instance" "chef" {
+    ami= "ami-0c55b159cbfafe1f0"
     instance_type= "t2.micro"
     key_name= "new"
     security_groups = ["packer"]
@@ -14,7 +14,7 @@ resource "aws_instance" "app" {
 
  connection {
     type        = "ssh"
-    user        = "ec2-user"
+    user        = "ubuntu"
     private_key = "${file("./new.pem")}"
   }
   provisioner "chef"{

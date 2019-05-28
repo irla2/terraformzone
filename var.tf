@@ -1,7 +1,7 @@
-variable "access_key" {
+variable "accesskey" {
     type= "string"  
 }
-variable "secret_key" {
+variable "secretkey" {
     type= "string"  
 }
 
